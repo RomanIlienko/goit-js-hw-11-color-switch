@@ -1,0 +1,11 @@
+.button {
+  display: inline;
+  width: 200px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: black;
+  color: yellow;
+  cursor: pointer;
+  font-size: 18px;
+  border-color: wheat;
+}

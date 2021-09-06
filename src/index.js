@@ -16,6 +16,7 @@ const refs = {
 refs.startBtn.addEventListener('click', switchColorStart)
 refs.stopBtn.addEventListener('click', switchColorStop)
 
+const CHANGE_TIME = 1000
 let timerId = null;
 
 const randomIntegerFromInterval = (min, max) => {
@@ -24,10 +25,10 @@ const randomIntegerFromInterval = (min, max) => {
 
 function switchColorStart() {
   timerId = setInterval(() => {
-
-   }, 1000);
+    console.log('hello');
+   }, CHANGE_TIME);
   refs.startBtn.setAttribute('disabled', true)
-  refs.body.style.backgroundColor = randomIntegerFromInterval
+  
 }
 
 function switchColorStop() {
@@ -35,7 +36,5 @@ function switchColorStop() {
   refs.startBtn.removeAttribute('disabled', true)
 };
 
-// function setBodyColor() {
-//   refs.body.style.backgroundColor = 
-// }
+
 
