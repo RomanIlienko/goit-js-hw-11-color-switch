@@ -25,16 +25,20 @@ const randomIntegerFromInterval = (min, max) => {
 
 function switchColorStart() {
   timerId = setInterval(() => {
-    console.log('hello');
-   }, CHANGE_TIME);
-  refs.startBtn.setAttribute('disabled', true)
-  
+    let colorChange = randomIntegerFromInterval(0, colors.length - 1)
+    refs.body.style.backgroundColor = colors[colorChange]
+  }, CHANGE_TIME);
+  if (timerId) {
+    refs.startBtn.setAttribute('disabled', true)
+  }
 }
 
 function switchColorStop() {
-  clearInterval(timerId);
   refs.startBtn.removeAttribute('disabled', true)
+  clearInterval(timerId);
 };
+
+
 
 
 
